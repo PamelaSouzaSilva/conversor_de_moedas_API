@@ -26,4 +26,11 @@ document.getElementById('currency-form').addEventListener('submit', async functi
     const valor = parseFloat(document.getElementById('amount').value);
     const daMoeda = document.getElementById('daMoeda').value;
     const paraMoeda = document.getElementById('paraMoeda').value;
+
+
+  // Buscar taxa de câmbio da API
+    const exchangeRate = await getExchangeRate(daMoeda, paraMoeda);
  
+ 
+    if (exchangeRate) {
+        const convertedValue = valor * exchangeRate;
