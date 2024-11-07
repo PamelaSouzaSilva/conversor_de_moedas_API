@@ -17,5 +17,3 @@ async function getExchangeRate(daMoeda, paraMoeda) {
         return null;
     }
 }
- 
- b
