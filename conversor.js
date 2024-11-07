@@ -21,3 +21,9 @@ async function getExchangeRate(daMoeda, paraMoeda) {
  
 document.getElementById('currency-form').addEventListener('submit', async function(event) {
     event.preventDefault();
+
+    // Obter valores de entrada
+    const valor = parseFloat(document.getElementById('amount').value);
+    const daMoeda = document.getElementById('daMoeda').value;
+    const paraMoeda = document.getElementById('paraMoeda').value;
+ 
