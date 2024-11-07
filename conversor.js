@@ -34,3 +34,11 @@ document.getElementById('currency-form').addEventListener('submit', async functi
  
     if (exchangeRate) {
         const convertedValue = valor * exchangeRate;
+
+         // Exibir resultado
+         const conversao = document.getElementById('result');
+         conversao.textContent = `Resultado: ${convertedValue.toFixed(2)} ${paraMoeda}`;
+     } else {
+         alert("Erro ao buscar a cotação. Tente novamente.");
+     }
+ });
